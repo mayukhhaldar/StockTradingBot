@@ -1,3 +1,11 @@
+'''
+Rules for algorithm design:
+
+Algorithms have full flexibility in input parameters,
+however the output should have a list of the order, each order will have the 
+[type of order, quanitity, symbol]
+'''
+
 
 #Some very simple algorithms for starting
 

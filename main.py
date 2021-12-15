@@ -22,9 +22,13 @@ def control():
 
     #trading software should take the recomendation and execute the trades
     
+def manual_summary():
+    account = connect()
 
+    account.daily_summary()
 
-control()
+#control()
+manual_summary()
 
 
 

@@ -60,9 +60,15 @@ class Alpaca_Account(object):
 
         print("\nPortfolio Return: " + str(self.get_portfolio_return()) + "%")
 
-    def execution(self, trade_recomendations):
-        #Take the list of recomended trades and execute them 
-        NotImplemented
+    # include all types of trades
+    """ def execution(self, trade_recomendations):
+        #use some sort of key - data pair
+        for (side, qty, symbol) in trade_recomendations:
+            print(side)
+            print(qty)
+            print(symbol) """
+
+            
 
 
 

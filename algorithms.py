@@ -28,6 +28,12 @@ def constant_threshold(account):
 def recurisve_constant_threshold(account):
     NotImplemented
 
+""" This martingale strategy works on a time interval basis on a stock:
+    - First select a stock 
+
+
+
+"""
 def martingale():
     NotImplemented
 
@@ -35,4 +41,7 @@ def mean_reversion():
     NotImplemented
 
 def moving_average_crossover():
+    NotImplemented
+
+def long_short():
     NotImplemented

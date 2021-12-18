@@ -13,7 +13,11 @@ def control():
 
     """ for position in account.get_positions():
         print(position) """
-    print(constant_threshold(account))
+    recomendations = constant_threshold(account)
+
+    print(recomendations)
+    account.execution(recomendations)
+    
     #print(account.portfolio_return)
     #account.summarise_positions()
 
@@ -27,8 +31,8 @@ def manual_summary():
 
     account.daily_summary()
 
-#control()
-manual_summary()
+control()
+#manual_summary()
 
 
 

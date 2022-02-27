@@ -1,38 +1,23 @@
-from account import Alpaca_Account
-from algorithms import *
-
-#implement a daily algorithm here and a user interface that allows selling and buying of stocks
-def connect() -> Alpaca_Account:
-    key = 'PKIRXLKY0R69F4OF4T1P'
-    secret = 'eUa5dXSzL1voDnCty4ug7ZlfbAESUZNi53v0n4DS'
-
-    return Alpaca_Account(key, secret)
-
-def control():
-    account = connect()
-
-    """ for position in account.get_positions():
-        print(position) """
-    recomendations = constant_threshold(account)
-
-    print(recomendations)
-    account.execution(recomendations)
-    
-    #print(account.portfolio_return)
-    #account.summarise_positions()
+from database import SystemDB
+from account_setup import run_ui
+from system_run import system_startup, run
 
 
-    #algorithms should give a recomendation of moves
+def system_control():
 
-    #trading software should take the recomendation and execute the trades
-    
-def manual_summary():
-    account = connect()
+    # getting all user accounts setup
+    run_ui()
 
-    account.daily_summary()
+    # getting all active accounts and setting up their databases and algorithms
+    system_startup()
 
-control()
-#manual_summary()
+    auto = False
+
+    while True:
+        run()
+        if not auto:
+            break
 
 
-
+if __name__ == "__main__":
+    system_control()

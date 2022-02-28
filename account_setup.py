@@ -1,9 +1,6 @@
 from database import SystemDB
 from getpass import getpass
 
-# This is user facing
-
-
 def add_account():
 
     # get the account information from the user

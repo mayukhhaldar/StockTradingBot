@@ -52,6 +52,7 @@ def sma_crossover(symbol):
         # sell stock
         return ('sell', limit)
 
+
 def feasibility_check(cash, quantity, limit):
     return (quantity*limit) < (cash - 10000)
 
@@ -62,18 +63,25 @@ def mayukh_haldar(alpaca_account):
 
     stocks = alpaca_account.get_positions()
     symbols = alpaca_account.get_symbol_list()
+    orders = alpaca_account.orders
+    in_order = []
+    
+    for order in orders:
+        in_order.append(order.symbol)
 
     for symbol in watchlist:
 
-        (decision, limit) = sma_crossover(symbol)
-
-        if symbol in symbols:
-            if decision == 'sell':
-                alpaca_account.execute_limit_sell(symbol, stocks[symbol][1], limit)
+        if symbol in in_order:
+            continue
         else:
-            if decision == 'buy':
-                quantity = 5
-                if feasibility_check(float(alpaca_account.get_account_cash()), quantity, limit):
-                    alpaca_account.execute_limit_buy(symbol, quantity, limit)
+            (decision, limit) = sma_crossover(symbol)
 
-
+            if symbol in symbols:
+                if decision == 'sell':
+                    alpaca_account.execute_limit_sell(
+                        symbol, stocks[symbol][0], limit)
+            else:
+                if decision == 'buy':
+                    quantity = 5
+                    if feasibility_check(float(alpaca_account.get_account_cash()), quantity, limit):
+                        alpaca_account.execute_limit_buy(symbol, quantity, limit)

@@ -3,7 +3,6 @@ from account_setup import run_ui
 from system_run import system_startup, run
 from time_control import wait_till_market_open
 
-
 def system_control():
 
     # getting all user accounts setup
@@ -17,6 +16,7 @@ def system_control():
     while True:
         wait_till_market_open()
         run()
+        print("Run Through Done!")
         if not auto:
             break
 

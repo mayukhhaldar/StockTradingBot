@@ -25,7 +25,9 @@ def add_trades(account_id, symbol, quantity, side, order_type, price):
 def get_trades():
     (con, cur) = get_connection_cursor(db_path)
     cur.execute('SELECT * FROM trades_log')
-    print(cur.fetchall())
+    trades = cur.fetchall()
+    for trade in trades:
+        print(trade)
     con.commit()
 
 
@@ -35,3 +37,4 @@ def get_trades_for_account(account_id):
     trades = cur.fetchall()
     con.commit()
     print(trades)
+

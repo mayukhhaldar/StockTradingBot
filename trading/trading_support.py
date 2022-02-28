@@ -1,6 +1,6 @@
 from trading import algorithm_dictionary
 from trading.trades_log import add_trades
-import alpaca_trade_api as tradeapi
+import alpaca_trade_api as tradeapi, errno
 
 
 class Alpaca_Account(object):
@@ -13,6 +13,7 @@ class Alpaca_Account(object):
         self.account = self.api.get_account()
         self.positions = self.api.list_positions()
         self.portfolio_return = self.get_portfolio_return()
+        self.orders = self.api.list_orders()
 
     # get the cash balance of the account
     def get_account_cash(self):
@@ -21,12 +22,6 @@ class Alpaca_Account(object):
     # See the special configurations of the account
     def get_account_configurations(self):
         print(self.api.get_account_configurations())
-
-    # See what orders are currently placed
-    def get_order_list(self):
-        order_list = self.api.list_orders()
-        for order in order_list:
-            print(order.side + " " + order.qty + " shares of " + order.symbol)
 
     # buy the stock
     def execute_buy(self, ticker, quantity):
@@ -47,7 +42,7 @@ class Alpaca_Account(object):
 
     def execute_limit_buy(self, ticker, quantity, limit):
         try:
-            #self.api.submit_order(ticker, quantity, "buy", type='limit', limit_price=str(limit))
+            self.api.submit_order(ticker, quantity, side="buy", type='limit', limit_price=str(limit))
             add_trades(self.account_id, ticker, quantity,
                        "buy", "limit", str(limit))
             print("We are buying " + ticker + " at " + str(limit))
@@ -56,7 +51,7 @@ class Alpaca_Account(object):
 
     def execute_limit_sell(self, ticker, quantity, limit):
         try:
-            #self.api.submit_order(ticker, quantity, "sell", limit_price=limit)
+            self.api.submit_order(ticker, quantity, side="sell", type='limit', limit_price=str(limit))
             add_trades(self.account_id, ticker, quantity,
                        "sell", "limit", str(limit))
             print("We are selling " + ticker + " at " + str(limit))

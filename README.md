@@ -3,13 +3,13 @@ An automated algorithmic trading bot that uses Alpaca Markets APIs to place trad
 
 Note: If you have any questions about these steps, please email me: mayukhhaldar@gmail.com
 
-##Steps To Get Started Before Using StockTradingBot
+## Steps To Get Started Before Using StockTradingBot
 1. Create an Alpaca Markets Account: https://app.alpaca.markets/signup
 2. From the Paper Trading Account get the API Keys (this guide will help you get the keys:https://alpaca.markets/learn/start-paper-trading/)
 3. Save these Keys, we will need them later
 4. Clone this repository to a folder in your computer
 
-##Running The Default Algorithm
+## Running The Default Algorithm
 Now that we have the repository cloned and our API keys saved, its time to run the bot.
 We will for now use the default algorithm as a trial run, and then you can write your own algorithms
 

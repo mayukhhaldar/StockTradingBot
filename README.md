@@ -1,2 +1,2 @@
 # TradingBot
-An automated trading machine that employs various algorithms to make trades
+An Algorithmic automated trading bot that will run custom scripts to make trades

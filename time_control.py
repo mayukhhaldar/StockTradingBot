@@ -23,7 +23,7 @@ def wait_till_market_open():
             print("Will wake up at:", market_open)
             time_to_open = (market_open - current_time).total_seconds()
             print("Going to sleep for:", time_to_open)
-            #time.sleep(time_to_open)
+            time.sleep(time_to_open)
         elif market_close > current_time:
             print("Market Open")
         else:
@@ -31,7 +31,7 @@ def wait_till_market_open():
             print("Will wake up at:", market_open)
             time_to_open = (market_open - current_time).total_seconds()
             print("Going to sleep for:", time_to_open)
-            #time.sleep(time_to_open)
+            time.sleep(time_to_open)
     else:
         working_day = False
         while not working_day:
@@ -43,5 +43,5 @@ def wait_till_market_open():
                 print("Will wake up at:", market_open)
                 time_to_open = (market_open - current_time).total_seconds()
                 print("Going to sleep for:", time_to_open)
-                time.sleep(5)
+                time.sleep(time_to_open)
             

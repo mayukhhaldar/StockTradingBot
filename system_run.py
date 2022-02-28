@@ -2,12 +2,6 @@ from database import SystemDB, get_connection_cursor
 from trading import bot_index
 from trading.trading_support import TradingBot_Account
 
-
-''' 
-This basically extracts all the user information from the database and then creates their trading bot objects
-
-'''
-
 def system_startup():
     list_accounts = SystemDB().get_account_list()
 

@@ -1,4 +1,4 @@
-from trading.mayukh_haldar import mayukh_haldar
+from trading.default_algorithm import default_algorithm
 
 # map should contain list of TradingBot_Accounts
 
@@ -8,7 +8,7 @@ bot_index = []
 # the key is the account_id and the value is the corresponding function
 
 algorithm_dictionary = {
-    '1': mayukh_haldar,
+    '1': default_algorithm,
 }
 
 

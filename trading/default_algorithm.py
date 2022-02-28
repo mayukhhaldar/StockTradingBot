@@ -56,8 +56,7 @@ def sma_crossover(symbol):
 def feasibility_check(cash, quantity, limit):
     return (quantity*limit) < (cash - 10000)
 
-# Remember to change to execute
-def mayukh_haldar(alpaca_account):
+def default_algorithm(alpaca_account):
 
     watchlist = ['AAPL', 'JPM', 'AMZN', 'AXP', 'PFE', 'VZ', 'GM', 'GE']
 

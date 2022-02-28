@@ -116,7 +116,6 @@ def initialize_system_database():
 # --------------------------------------------------------------------------------------------
 # should only be called once to start the system or after a hard restart of the system
 def system_database_full_startup():
-
     close_databases()
     if not initialize_system_database():
         print("Failed to initalize systems databases")
@@ -136,8 +135,7 @@ def system_database_hard_restart(number):
     intialize_num_accounts()
     set_num_accounts(number)
 
-# put some maintanence code here
 
+# --------------------------------------------------------------------------------------------
+# Write any required admin code over here
 
-# operations code
-system_database_full_startup()

@@ -2,7 +2,6 @@ from database import SystemDB
 from getpass import getpass
 
 def add_account():
-
     # get the account information from the user
     full_name = input("Please enter your full name: ")
     key_id = input("Please enter your Key_ID: ")
@@ -106,35 +105,35 @@ def login():
         return account_id
 
 
-def test_script(add):
-    key = 'PKIRXLKY0R69F4OF4T1P'
-    secret = 'eUa5dXSzL1voDnCty4ug7ZlfbAESUZNi53v0n4DS'
+def login_script():
+    key = 'Enter Key ID'  # EDIT THIS LINE 
+    secret = 'Enter Secret ID'  #EDIT THIS LINE
 
     system_db = SystemDB()
     account_id = generate_account_id(system_db)
-    full_name = "Mayukh Haldar"
-    username = "mayukhhaldar"
-    password = "trial"
+    full_name = "Default Program"
+    username = "defpro"
+    password = "defpro123"
 
-    if add:
-        system_db.add_account(full_name, username,
-                              password, account_id, key, secret)
+    system_db.add_account(full_name, username,
+                            password, account_id, key, secret)
     system_db.print_account_list()
     system_db.get_account_login_details()
 
 
 def run_ui():
-    print("Would you like to login or add an account?")
-    response = input(
-        "1. Login\n2. Add Account\n3. Exit\n4. Continue to program\n5. Run Test Script\n(1/2/3/4):")
+    while True:
+        print("Would you like to login or add an account?")
+        response = input(
+            "1. Login\n2. Add Account\n3. Exit\n4. Continue to program\n5. Run Default Login Script (For this enter '5 Default')\n(1/2/3/4/5 True): ")
 
-    if response == "1":
-        login_options(login())
-    elif response == "2":
-        add_account()
-    elif response == "3":
-        exit()
-    elif response == "4":
-        return
-    elif response == "5":
-        test_script(True)
+        if response == "1":
+            login_options(login())
+        elif response == "2":
+            add_account()
+        elif response == "3":
+            exit()
+        elif response == "4":
+            return
+        elif response == "5 Default":
+            login_script()

@@ -11,7 +11,9 @@ Note: If you have any questions about these steps, please email me: mayukhhaldar
 
 ## Running The Default Algorithm
 Now that we have the repository cloned and our API keys saved, its time to run the bot.
-We will for now use the default algorithm as a trial run, and then you can write your own algorithms
+We will for now use the default algorithm as a trial run.
+Most of the setup is complete to run the default algorithm. Later you will be shown how to modify the code and run your own custom algorithms. 
+1. Go to the `account_setup.py` file, and in the function `login_script()`, enter your Key ID and Secret ID from Alpaca Markets.
 
 
 

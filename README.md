@@ -16,9 +16,8 @@ Most of the setup is complete to run the default algorithm. Later you will be sh
 1. Go to the `account_setup.py` file, and in the function `login_script()`, enter your Key ID and Secret ID from Alpaca Markets.
 2. Go to `main.py` and run the script.
 3. The main menu will appear, and as it is suggested enter `5 Default`:
-![MainMenu - Default](https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/MainMenu.png?raw=true)
+4. ![MainMenu - Default](https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/MainMenu.png?raw=true)
 
-5. More to come...
 
 ## Running Your Own Algorithm
 

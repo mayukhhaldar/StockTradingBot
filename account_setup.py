@@ -100,13 +100,13 @@ def login():
     try:
         account_id = system_db.get_account_id(username, password)
     except:
-        print("Account not found")
+        print("Username or password has been spelt incorrectly")
     else:
         return account_id
 
 
 def login_script():
-    key = 'Enter Key ID'  # EDIT THIS LINE 
+    key = 'Enter Key ID'  #EDIT THIS LINE 
     secret = 'Enter Secret ID'  #EDIT THIS LINE
 
     system_db = SystemDB()
@@ -117,8 +117,6 @@ def login_script():
 
     system_db.add_account(full_name, username,
                             password, account_id, key, secret)
-    system_db.print_account_list()
-    system_db.get_account_login_details()
 
 
 def run_ui():

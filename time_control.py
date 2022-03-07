@@ -8,7 +8,6 @@ def wait_till_market_open():
     current_time = datetime.datetime.now()
     current_date = datetime.date.today()
 
-    #check day if its a working day
     usa_holidays = holidays.UnitedStates()
 
     holiday = current_date in usa_holidays
@@ -44,4 +43,3 @@ def wait_till_market_open():
                 time_to_open = (market_open - current_time).total_seconds()
                 print("Going to sleep for:", time_to_open)
                 time.sleep(time_to_open)
-            

@@ -99,12 +99,3 @@ class SystemDB(object):
         for row in cur.execute('SELECT * FROM accounts'):
             print(row)
         con.commit()
-
-    def get_account_login_details(self):
-        (con, cur) = get_connection_cursor(self.db_path)
-        for row in cur.execute('SELECT * FROM account_login'):
-            print(row)
-        con.commit()
-
-
-

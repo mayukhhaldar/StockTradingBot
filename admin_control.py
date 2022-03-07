@@ -2,9 +2,9 @@ from database import SystemDB, get_connection_cursor
 import os
 
 '''
-This script should not be touched and will not be imported into application.
+This script should not be modified and is not be imported into application.
 It is to be used only for setting up the inital values in the databases
-so the application can pull the information and get started
+so the application can pull the information and get started.
 
 '''
 
@@ -115,6 +115,8 @@ def initialize_system_database():
 
 # --------------------------------------------------------------------------------------------
 # should only be called once to start the system or after a hard restart of the system
+
+
 def system_database_full_startup():
     close_databases()
     if not initialize_system_database():
@@ -138,4 +140,3 @@ def system_database_hard_restart(number):
 
 # --------------------------------------------------------------------------------------------
 # Write any required admin code over here
-

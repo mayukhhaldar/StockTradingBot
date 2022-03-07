@@ -18,6 +18,8 @@ Most of the setup is complete to run the default algorithm. Later you will be sh
 3. The main menu will appear, and as it is suggested enter `5 Default`:
 4. ![MainMenu - Default](https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/MainMenu.png?raw=true)
 
+<img align="left" src="https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/MainMenu.png?raw=true">
+
 
 ## Running Your Own Algorithm
 

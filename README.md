@@ -1,6 +1,8 @@
 # StockTradingBot
 An automated algorithmic trading bot that uses Alpaca Markets APIs to place trades. 
 
+# Current Status: Documentation in progress
+
 Note: If you have any questions about these steps, please email me: mayukhhaldar@gmail.com
 
 ## Steps To Get Started Before Using StockTradingBot

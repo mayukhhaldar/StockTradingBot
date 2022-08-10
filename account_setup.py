@@ -106,8 +106,8 @@ def login():
 
 
 def login_script():
-    key = 'Enter Key ID'  #EDIT THIS LINE 
-    secret = 'Enter Secret ID'  #EDIT THIS LINE
+    key = 'PKL6CNTMU41ZVSH7Z9H5'  #EDIT THIS LINE 
+    secret = 'tTV4KB7B132pvGpMd3hNq9Ovl1Pk0cR5loxSc6XL'  #EDIT THIS LINE
 
     system_db = SystemDB()
     account_id = generate_account_id(system_db)
@@ -117,13 +117,15 @@ def login_script():
 
     system_db.add_account(full_name, username,
                             password, account_id, key, secret)
+    
+    print("Login Script made")
 
 
 def run_ui():
     while True:
         print("Would you like to login or add an account?")
         response = input(
-            "1. Login\n2. Add Account\n3. Exit\n4. Continue to program\n5. Run Default Login Script (For this enter '5 Default')\n(1/2/3/4/5 True): ")
+            "1. Login\n2. Add Account\n3. Exit\n4. Continue to program\n5. Run Default Login Script (For this enter '5 Default')\n(1/2/3/4/5 Default): ")
 
         if response == "1":
             login_options(login())

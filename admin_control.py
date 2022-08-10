@@ -136,6 +136,7 @@ def system_database_hard_restart(number):
     initialize_system_database()
     intialize_num_accounts()
     set_num_accounts(number)
+    print("System has been restarted")
 
 
 # --------------------------------------------------------------------------------------------

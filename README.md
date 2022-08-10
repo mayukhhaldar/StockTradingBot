@@ -25,6 +25,9 @@ Most of the setup is complete to run the default algorithm. Later you will be sh
 </p>
 
 ## Running Your Own Algorithm
+To run your own custom algorithm, you must create an account first. So first we will go through creating an account.
+
+### Running Your Own Algorithm
 
 
 

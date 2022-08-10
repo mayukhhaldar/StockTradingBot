@@ -24,12 +24,20 @@ Most of the setup is complete to run the default algorithm. Later you will be sh
   <img src="https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/MainMenuOption4.png?raw=true">
 </p>
 
-## Running Your Own Algorithm
+## Running Your Own Algorithm (Documentation Not Completed)
 To run your own custom algorithm, you must create an account first. So first we will go through creating an account.
 
 ### Creating An Account
 Creating an account is pretty simple, as you would just need to navigate the terminal UI.
-1. 
+Note: If you are trying to do this step after creating the default account, you cannot have two accounts with the same Key ID and Secret ID, so either you can create another Alpaca Markets account or restart the databases and that will allow you to create an account again.
+1. In the main menu type `2`
+2. Follow the prompts and fill out the information. 
+3. When it is completed, this will be outputted:
+<p align="center">
+  <img src="https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/AddAccount.png?raw=true">
+</p>
+   Note what you need is the first number, the rest is your Full Name, Username, Key ID and Secret ID.
+4. More to come.....
 
 
 

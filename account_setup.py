@@ -24,7 +24,7 @@ def add_account():
         except:
             print("Add account failed")
         else:
-            print("Account has be added, here is the information and your Account ID")
+            print("Account has been added, here is the information and your Account ID")
             print(system_db.get_specifc_account(account_id))
 
 
@@ -106,7 +106,7 @@ def login():
 
 
 def login_script():
-    key = 'Enter Key ID'  #EDIT THIS LINE 
+    key = 'Enter KEY ID'  #EDIT THIS LINE 
     secret = 'Enter Secret ID'  #EDIT THIS LINE
 
     system_db = SystemDB()

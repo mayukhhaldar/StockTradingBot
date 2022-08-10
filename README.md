@@ -15,7 +15,14 @@ We will for now use the default algorithm as a trial run.
 Most of the setup is complete to run the default algorithm. Later you will be shown how to modify the code and run your own custom algorithms. 
 1. Go to the `account_setup.py` file, and in the function `login_script()`, enter your Key ID and Secret ID from Alpaca Markets.
 2. Go to `main.py` and run the script.
-3. This screen will appear:...
+3. Run the default login script that creates an account with the default credentials. To run it type `5 Default`:
+<p align="center">
+  <img src="https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/MainMenuOption5.png?raw=true">
+</p>
+4. The login script should now be made. Continue to running the program by typing `4`. You are now running the algorithmic trading system concurrently with the EST timezone.
+<p align="center">
+  <img src="https://github.com/mayukhhaldar/StockTradingBot/blob/main/images/MainMenuOption4.png?raw=true">
+</p>
 
 ## Running Your Own Algorithm
 

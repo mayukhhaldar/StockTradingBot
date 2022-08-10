@@ -18,9 +18,11 @@ def add_account():
     if response == "y":
         system_db = SystemDB()
         account_id = generate_account_id(system_db)
+        print(account_id)
         try:
             system_db.add_account(full_name, username,
                                   password, account_id, key_id, secret_id)
+            system_db.increment_num_accounts()
         except:
             print("Add account failed")
         else:

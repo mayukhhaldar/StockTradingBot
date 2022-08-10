@@ -44,13 +44,21 @@ class SystemDB(object):
 
     def add_account(self, full_name, username, password, account_id, key_id, secret_id):
         name = full_name.lower()
+   
         (con, cur) = get_connection_cursor(self.db_path)
-        cur.execute("INSERT INTO accounts VALUES (?, ?, ?, ?, ?)",
-                    (account_id, name, username, key_id, secret_id))
-        con.commit()
-        cur.execute("INSERT INTO account_login VALUES (?, ?, ?)",
-                    (username, password, account_id))
-        con.commit()
+        try:
+            cur.execute("INSERT INTO accounts VALUES (?, ?, ?, ?, ?)",
+                        (account_id, name, username, key_id, secret_id))
+            con.commit()
+        except:
+            print("Was not able to insert into accounts database")
+
+        try:
+            cur.execute("INSERT INTO account_login VALUES (?, ?, ?)",
+                        (username, password, account_id))
+            con.commit()
+        except:
+            print("Was not able to insert into accounts_login database")
 
     def remove_account(self, account_id):
         (con, cur) = get_connection_cursor(self.db_path)

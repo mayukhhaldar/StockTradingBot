@@ -130,14 +130,17 @@ def system_database_force_shutdown():
     close_databases()
 
 
-def system_database_hard_restart(number):
+def system_database_hard_restart():
 
     close_databases()
     initialize_system_database()
     intialize_num_accounts()
-    set_num_accounts(number)
     print("System has been restarted")
 
 
 # --------------------------------------------------------------------------------------------
 # Write any required admin code over here
+
+# This restarts the entire database systems
+# Be careful, if this script is run then it will erase all saved information (including account information)
+system_database_hard_restart()

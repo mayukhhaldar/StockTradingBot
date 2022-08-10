@@ -106,8 +106,8 @@ def login():
 
 
 def login_script():
-    key = 'PKL6CNTMU41ZVSH7Z9H5'  #EDIT THIS LINE 
-    secret = 'tTV4KB7B132pvGpMd3hNq9Ovl1Pk0cR5loxSc6XL'  #EDIT THIS LINE
+    key = 'Enter Key ID'  #EDIT THIS LINE 
+    secret = 'Enter Secret ID'  #EDIT THIS LINE
 
     system_db = SystemDB()
     account_id = generate_account_id(system_db)

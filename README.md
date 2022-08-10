@@ -27,7 +27,11 @@ Most of the setup is complete to run the default algorithm. Later you will be sh
 ## Running Your Own Algorithm
 To run your own custom algorithm, you must create an account first. So first we will go through creating an account.
 
-### Running Your Own Algorithm
+### Creating An Account
+Creating an account is pretty simple, as you would just need to navigate the terminal UI.
+1. 
+
+
 
 
 
